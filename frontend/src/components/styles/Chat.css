@@ -1,0 +1,99 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 80px;
+  }
+  
+  .messageContainer {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .currentUserMessage {
+    background-color: #93d3fb;
+    color: #495057;
+    align-self: flex-end;
+  }
+  
+  .otherUserMessage {
+    background-color: #f8f9fa;
+    color: #495057;
+    align-self: flex-start;
+  }
+  
+  .message-content {
+    flex: 1;
+  }
+  
+  .vote-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .voteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .voteIcon {
+    vertical-align: middle;
+  }
+
+  .upvote {
+    color: green;
+  }
+  
+  .downvote {
+    color: red;
+  }
+  
+  .upvote-count {
+    margin-left: 5px;
+    color: green;
+  }
+
+  .downvote-count {
+    margin-left: 5px;
+    color: red;
+  }
+  
+  .message-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .top-bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .left-buttons {
+    flex: 1;
+  }
+  
+  .right-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .back-button, .logout-button {
+    margin: 0 10px;
+  }

@@ -1,0 +1,43 @@
+# backend-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: backend:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: REDIS_ADDR
+              value: redis:6379
+            - name: DB_USER
+              value: postgres
+            - name: DB_PASSWORD
+              value: Abcd@1234
+            - name: DB_NAME
+              value: chat
+            - name: DB_HOST
+              value: postgres
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 30001
+  selector:
+    app: backend

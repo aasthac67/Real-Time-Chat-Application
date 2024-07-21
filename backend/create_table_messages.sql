@@ -1,0 +1,9 @@
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    sender VARCHAR(255) NOT NULL,
+    receiver VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    upvotes INTEGER DEFAULT 0,
+    downvotes INTEGER DEFAULT 0
+);
